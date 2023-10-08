@@ -165,6 +165,7 @@ namespace cereal
       {
         itsWriter.SetMaxDecimalPlaces( options.itsPrecision );
         itsWriter.SetIndent( options.itsIndentChar, options.itsIndentLength );
+        itsWriter.SetFormatOptions(rapidjson::PrettyFormatOptions::kFormatSingleLineArray);
         itsNameCounter.push(0);
         itsNodeStack.push(NodeType::StartObject);
       }
